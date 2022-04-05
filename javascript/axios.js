@@ -8,7 +8,7 @@ const axios = require('axios');
 const FormData = require('form-data');
 
 // read the skin file
-const file = fs.readFileSync('my-skin.png');
+const file = fs.readFileSync('../my-skin.png');
 
 // construct the body
 const body = new FormData();
@@ -22,7 +22,7 @@ axios.request({
     method: 'POST',
     url: 'https://api.mineskin.org/generate/upload',
     headers: body.getHeaders({
-        'Content-Type': 'application/x-www-form-urlencoded'
+        //'Authorization': 'Bearer <api key here>'
     }),
     data: body
 }).then(response => {
