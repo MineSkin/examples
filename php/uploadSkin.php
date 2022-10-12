@@ -8,8 +8,7 @@ if (function_exists('curl_file_create')) {
     $file = '@' . realpath($fullFilePath);
 }
 
-$data = array('model' => 'steve'          //Model       :   steve / alex
-            , 'variant' => 'classic'      //Variant     :   classic / slim
+$data = array('variant' => 'classic'      //Variant     :   classic / slim
             , 'name' => 'asdasd'          //Name        :   Skin name
             , 'visibility' => '0'         //Visibility  :   0 = public / 1 = private
             , 'file' => $file);           //File        :   Actual skin file
